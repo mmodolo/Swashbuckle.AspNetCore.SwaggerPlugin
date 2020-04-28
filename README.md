@@ -33,7 +33,6 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
       or
 
   b.  
-  
       ```
       services.AddSwaggerService(Configuration, typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml");
       ```
