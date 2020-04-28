@@ -1,7 +1,7 @@
 # Swashbuckle.AspNetCore.SwaggerPlugin
 Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://github.com/microsoft/aspnet-api-versioning) on ASP.NET Core Web Api projects
 
-##Add Swagger to your Asp.net Core Web Api in 4 steps:
+## Add Swagger to your Asp.net Core Web Api in 4 steps:
 
 ## Getting Started 
 
@@ -25,14 +25,14 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
 3. In Startup.cs file, add the following code inside of ConfigureServices method just after services.AddControllers();
 
   a.
-      ```csharp
+      ```
       services.AddSwaggerService(Configuration);
       ```
     
       or
 
   b.    
-      ```csharp
+      ```
       services.AddSwaggerService(Configuration, typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml");
       ```
     
@@ -41,15 +41,15 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
 4. In Startup.cs file, modify the Configure method as following:
 
   a. Add new two parameters "IApiVersionDescriptionProvider provider, ISwaggerConfiguration swaggerConfig" so the method signature should look something like:
-      ```csharp
+      ```
       public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider, ISwaggerConfiguration swaggerConfig)      
       ```
   b. Add the following code before app.UseEndpoints();
-      ```csharp
+      ```
       app.AddUseSwagger(provider, swaggerConfig);      
       ```
   
- ##Optional 
+ ## Optional 
  
  5. In case you decide to use the step 3.b, you will required to insert the following code inside of your .csproj file:
  
@@ -61,4 +61,4 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
   
   ---
   
-  After doing the above steps, you should be able to see the documentation at: https://localhost:<port>/apidocs
+  After doing the above steps, you should be able to see the documentation at: [https://localhost:<port>/apidocs](https://localhost:<port>/apidocs)
