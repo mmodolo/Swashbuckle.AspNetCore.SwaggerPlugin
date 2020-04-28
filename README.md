@@ -61,4 +61,4 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
   
   ---
   
-  After doing the above steps, you should be able to see the documentation at: [https://localhost:<port>/apidocs](https://localhost:<port>/apidocs)
+  After doing the above steps, you should be able to see the documentation at: [http://localhost:port/apidocs](http://localhost:port/apidocs)
