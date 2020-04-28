@@ -1,5 +1,5 @@
 # Swashbuckle.AspNetCore.SwaggerPlugin
-Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://github.com/microsoft/aspnet-api-versioning) on ASP.NET Core Web Api projects
+Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://github.com/microsoft/aspnet-api-versioning) (Multi version configuration) on ASP.NET Core Web Api projects
 
 ## Add Swagger to your Asp.net Core Web Api in 4 steps:
 
@@ -26,7 +26,6 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
 3. In Startup.cs file, add the following code inside of ConfigureServices method just after services.AddControllers();
 
   a.
-  
       ```
       services.AddSwaggerService(Configuration);
       ```
