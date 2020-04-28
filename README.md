@@ -22,16 +22,19 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
       "Authentication": "AppIdAndApiKey"
     }
     ```
+    
 3. In Startup.cs file, add the following code inside of ConfigureServices method just after services.AddControllers();
 
   a.
+  
       ```
       services.AddSwaggerService(Configuration);
       ```
     
       or
 
-  b.    
+  b.  
+  
       ```
       services.AddSwaggerService(Configuration, typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml");
       ```
@@ -41,10 +44,13 @@ Swashbuckle plugin to easy starting using Swagger and [ApiVersion](https://githu
 4. In Startup.cs file, modify the Configure method as following:
 
   a. Add new two parameters "IApiVersionDescriptionProvider provider, ISwaggerConfiguration swaggerConfig" so the method signature should look something like:
+      
       ```
       public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider, ISwaggerConfiguration swaggerConfig)      
       ```
+      
   b. Add the following code before app.UseEndpoints();
+      
       ```
       app.AddUseSwagger(provider, swaggerConfig);      
       ```
